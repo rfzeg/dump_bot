@@ -1,4 +1,4 @@
-# ROS dumpster package
+# Dumpster robot
 
 ## Abstract
 The package contains a URDF robot model description of the dumpster robot for use in simulation.
@@ -17,7 +17,7 @@ Image of the robot model
 + **meshes/** : (required) contains the mesh files that are part of the geometry of that robot
 + **config/** : (optional) contains YAML files that store the Navigation Stack configuration files for the robot
 + **rviz/** : (optional) contains Rviz configuration settings for displaying the robot model
-+ **launch/** : (optional) contains launch file for running the robot model in Gazebo
++ **launch/** : (optional) contains launch files for a demo of the robot model in Gazebo
 + **worlds/** : (optional) contains scene/environment files for Gazebo
 + **maps/** : (optional) contains the occupancy grid based maps required for navigation
 
@@ -29,9 +29,9 @@ Image of the robot model
 
 - Clone this repository into a ROS catkin workspace
 - Build and source the workspace
-- To launch this package including Rviz: `roslaunch dumpster dumpster.launch`
+- To launch this package including Rviz: `roslaunch dumpster demo.launch`
 
-If you want to move the robot using a keyboard you will also need to start a teleop node.
+If you want to move the robot using a keyboard you will also need to start a teleop node.  
 To run the robot with the Navigation Stack type in a new window: `roslaunch dumpster amcl.launch`
 
-This package has only been tested on Ubuntu 16.04 LTS with ROS Kinetic and Gazebo 7.0.
+This package has only been tested on Ubuntu 16.04 LTS with ROS Kinetic and Gazebo 7.0.d
