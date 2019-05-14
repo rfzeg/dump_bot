@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <launch>
-  
+
+<!-- Send urdf to param server -->  
 <include file="$(find dumpster)/launch/robot_description.launch"/>
 
+<!-- Choose GUI -->
+<arg name="use_rviz" default="false" />
+
+<!-- Start Gazebo -->
   <arg name="world" default="empty"/> 
   <arg name="paused" default="false"/>
   <arg name="use_sim_time" default="true"/>
@@ -20,7 +25,7 @@
     <arg name="debug" value="$(arg debug)"/>
 </include>
   
-<!--spawn a robot in gazebo world-->
+<!-- Spawn robot in Gazebo world -->
 	<arg name= "pos_x" default = "0"/>
 	<arg name= "pos_y" default = "0"/>
 	<arg name= "pos_z" default = "0"/>
@@ -36,7 +41,7 @@
 	-model $(arg robot_name)"
 	respawn="false" output="screen"/>
 
-<!--launch rviz with configuration file-->
-<node type="rviz" name="rviz" pkg="rviz" respawn="false" args="-d $(find dumpster)/rviz/dumpster.rviz"/>
+<!-- Run joint_state_publisher, robot_state_publisher and Rviz with configuration file-->
+<node if="$(arg use_rviz)" name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find dumpster)/rviz/dumpster.rviz"/>
 
 </launch>

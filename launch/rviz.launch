@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+
+<!-- Choose GUI -->
+<arg name="use_rviz" default="true" />
+
+<!-- Run joint_state_publisher, robot_state_publisher and Rviz with configuration file-->
+<node if="$(arg use_rviz)" name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d $(find dumpster)/rviz/dumpster.rviz"/>
+
+</launch>
