@@ -3,6 +3,7 @@
 <launch>
   
   <!-- Set name of the world to be launched -->
+  <!-- <arg name="world" default="empty"/> -->
   <arg name="world" default="$(find dumpster)/worlds/jackal_race.world"/>
   <arg name="paused" default="false"/>
   <arg name="use_sim_time" default="true"/>

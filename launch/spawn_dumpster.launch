@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <launch>
 
-<include file="$(find dumpster)/launch/robot_description.launch"/>
+<!-- Requires: urdf 'robot_description' in parameter server (e.g. run robot_description.launch) -->
   
 <!--spawn robot in Gazebo -->
 	<arg name= "pos_x" default = "0"/>
