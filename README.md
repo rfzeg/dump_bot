@@ -11,6 +11,9 @@ It also features a dump bin on top of its chassis. Additionally, both a laser sc
 ![RobotModels1](https://user-images.githubusercontent.com/40167051/56065185-6f83aa00-5d74-11e9-84e7-399de40695e3.png)
 Image of the robot model
 
+## Plugins
+To provide situational awareness the robot model is equipped with a camera and a laser scanner.
+
 ## Repository architecture
 ### Directories :
 + **urdf/** : (required) contains the files that generate the robot model and provide simulated actuators and sensors
